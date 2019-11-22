@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.csim.house.request.BuildRequest;
+import com.csim.house.request.HouseBuildRequest;
 import com.csim.house.service.HouseService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,9 +22,10 @@ public class HouseController {
 	HouseService houseService;
 	
 	@PostMapping("/house-build")
-	private ResponseEntity<String> build(@RequestBody BuildRequest buildRequest) {
+	private ResponseEntity<String> build(@RequestBody HouseBuildRequest buildRequest) {
 		log.info("Adding house type {}, {}",buildRequest.getType(),buildRequest.getSubType());
 		boolean result = houseService.buildHouse(buildRequest);
+		
 		
 		if(result) {
 		log.info("Added house type {}, {} to the database",buildRequest.getType(),buildRequest.getSubType());

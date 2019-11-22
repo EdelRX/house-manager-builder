@@ -7,5 +7,5 @@ import com.csim.house.model.HouseBuilding;
 
 @Repository
 public interface HouseBuildingRepository extends MongoRepository<HouseBuilding,Long>{
-
+	
 }

@@ -7,7 +7,7 @@ import com.csim.house.model.HouseBuilding;
 import com.csim.house.model.Location;
 import com.csim.house.model.parameters.HouseStatus;
 import com.csim.house.repositories.HouseBuildingRepository;
-import com.csim.house.request.BuildRequest;
+import com.csim.house.request.HouseBuildRequest;
 
 @Service
 public class HouseService {
@@ -15,8 +15,8 @@ public class HouseService {
 	@Autowired
 	HouseBuildingRepository houseBuildingRepository;
 
-	public boolean buildHouse(BuildRequest buildRequest) {
-
+	public boolean buildHouse(HouseBuildRequest buildRequest) {
+		
 		boolean result;
 
 		try {

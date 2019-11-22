@@ -8,7 +8,7 @@ import com.csim.house.model.parameters.HouseType;
 import lombok.Data;
 
 @Data
-public class BuildRequest implements Serializable{
+public class HouseBuildRequest implements Serializable{
 	
 	private static final long serialVersionUID = -2311224061055110287L;
 	
